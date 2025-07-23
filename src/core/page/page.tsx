@@ -1,25 +1,38 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { RedirectModule } from "../hoook/RedirectModule";
-import { ContainerModule } from "../shared/ContainerModules";
 import { ContainerPage } from "../shared/ContainerPage";
-import { WhatsAppButton } from "../shared/WhatsappButton";
+import { WhatsAppButton } from "../shared/WhatsAppButton";
+import { Header } from "./components/Header";
+import { Service } from "./components/Services";
+import { AboutUs } from "./components/AboutUs";
+import { Experiencie } from "./components/Experience";
+import { Contact } from "./components/Contact";
 
 export const PageMain = () => {
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
 
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            console.log(element);
 
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+    if (loading) {
+        return (
+            <RedirectModule setLoading={setLoading} />
+        )
+    }
 
     return (
         <ContainerPage >
-            {loading && (
-                <RedirectModule setLoading={setLoading} />
-            )}
-            <WhatsAppButton phoneNumber="1124555"/>
-            <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae architecto culpa deleniti saepe esse. Earum eligendi perspiciatis totam ex molestiae molestias nemo placeat amet quaerat eaque? Libero, nam consequuntur.
-                Vero ad esse quas quos necessitatibus aut. Eaque fugiat recusandae numquam in ducimus optio totam, natus reiciendis molestias quisquam facere, quod repellendus architecto earum maiores eveniet officiis distinctio. Ratione, eaque!
-                Fugit quidem unde vitae eum pariatur amet velit laboriosam. Ea accusantium fugit ipsum voluptatibus totam officiis, in voluptatem quasi, corporis nobis nulla natus, explicabo sint consectetur quas. Fugit, recusandae consequatur.
-                Assumenda deserunt necessitatibus illum beatae temporibus nulla sequi repellendus eaque. Velit dolores facere unde quos doloremque, commodi est ipsam laborum alias molestias similique eius assumenda maiores incidunt corporis. Quasi, nam.
-                Eius laborum, nobis, architecto, reprehenderit sapiente in fuga aliquid fugiat harum odio cum ipsum beatae neque. Quas ut commodi dolorem veniam saepe aperiam maxime harum, dolore unde eos est sed!</>
+            <WhatsAppButton phoneNumber="1124555" />
+            <Header onScrollToSection={scrollToSection} />
+            <Service />
+            <AboutUs />
+            <Experiencie />
+            <Contact />
         </ContainerPage>
     )
 }
