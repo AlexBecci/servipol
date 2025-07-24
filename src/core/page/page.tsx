@@ -15,7 +15,6 @@ export const PageMain = () => {
         const element = document.getElementById(id);
         if (element) {
             console.log(element);
-
             element.scrollIntoView({ behavior: 'smooth' })
         }
     }
@@ -28,6 +27,7 @@ export const PageMain = () => {
     return (
         <ContainerPage >
             <WhatsAppButton phoneNumber="1124555" />
+            
             <Header onScrollToSection={scrollToSection} />
             <Service />
             <AboutUs />
