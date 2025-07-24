@@ -1,26 +1,18 @@
-import { motion } from "framer-motion";
-
 interface NavLinkProps {
-    onClick: () => void;
-    children: React.ReactNode;
+  onClick: () => void;
+  children: React.ReactNode;
 }
 
 export const NavLink = ({ onClick, children }: NavLinkProps) => {
-    return (
-        <button
-            onClick={onClick}
-            className="relative text-foreground/70 hover:text-primary transition-colors duration-300 group"
-        >
-            {children}
+  return (
+    <button
+      onClick={onClick}
+      className="relative inline-block text-foreground/70 hover:text-blue-500 transition-colors duration-300 group"
+    >
+      <span className="relative z-10">{children}</span>
 
-            {/* Barra inferior animada */}
-            <motion.span
-                layoutId="underline"
-                initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
-                className="absolute -bottom-1 left-0 h-0.5 bg-primary"
-            />
-        </button>
-    );
+      {/* Barra inferior animada solo debajo del texto */}
+      <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-500 transition-all duration-300 delay-200 group-hover:w-full"></span>
+    </button>
+  );
 };
