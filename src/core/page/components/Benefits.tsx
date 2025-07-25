@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { FaBullseye, FaCheckCircle, FaCog, FaShieldAlt } from "react-icons/fa"
-import { Parallax } from 'react-scroll-parallax'
 
 export const Benefits = () => {
     const benefits = [

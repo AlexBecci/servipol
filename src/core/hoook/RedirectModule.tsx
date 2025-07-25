@@ -1,5 +1,4 @@
-import { useEffect, useState, type FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, type FC } from "react";
 import { LuLoader } from "react-icons/lu"; // o cualquier ícono de carga
 
 interface RedirectModuleProps {

@@ -2,11 +2,9 @@
 
 import { motion } from "framer-motion";
 import { LuUsers } from "react-icons/lu";
-import useIsMobile from "../../hoook/IsMobile";
 
 export const AboutUs = () => {
 
-    const isMobile = useIsMobile();
 
     return (
         <section
