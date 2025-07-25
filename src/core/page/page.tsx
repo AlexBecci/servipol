@@ -7,6 +7,9 @@ import { Service } from "./components/Services";
 import { AboutUs } from "./components/AboutUs";
 import { Experiencie } from "./components/Experience";
 import { Contact } from "./components/Contact";
+import { OurServices } from "./components/OurService";
+import { Benefits } from "./components/Benefits";
+import { WorkProcessSection } from "./components/WorkProcessSection";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -27,12 +30,15 @@ export const PageMain = () => {
     return (
         <ContainerPage >
             <WhatsAppButton phoneNumber="1124555" />
-            
             <Header onScrollToSection={scrollToSection} />
             <Service />
             <AboutUs />
+            <OurServices />
+            <Benefits />
+            <WorkProcessSection />
             <Experiencie />
-            <Contact />
+            <Contact /> 
+           
         </ContainerPage>
     )
 }

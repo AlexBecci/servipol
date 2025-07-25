@@ -7,7 +7,7 @@ interface ContainerPageProps {
 
 export const ContainerPage: FC<ContainerPageProps> = ({ children, className = "" }) => {
     return (
-        <div className={`min-h-screen w-full text-black bg-gray-100 px-4 py-6  ${className}`}>
+        <div className={`min-h-screen w-full text-black tracking-wide bg-gray-100 inter-bold items-center justify-center  ${className}`}>
             {children}
         </div>
     );
