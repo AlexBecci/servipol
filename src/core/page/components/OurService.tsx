@@ -13,7 +13,7 @@ const services = [
         delay: 0.2,
     },
     {
-        icon: <LuFactory  className="h-10 w-10 text-blue-600" />,
+        icon: <LuFactory className="h-10 w-10 text-blue-600" />,
         title: "Operación en Plantas",
         description: "Gestión y operación especializada de plantas industriales con personal técnico calificado.",
         delay: 0.4,
@@ -25,7 +25,7 @@ const services = [
         delay: 0.6,
     },
     {
-        icon: <AiOutlineThunderbolt  className="h-10 w-10 text-blue-600" />,
+        icon: <AiOutlineThunderbolt className="h-10 w-10 text-blue-600" />,
         title: "Instalaciones Eléctricas",
         description: "Instalaciones eléctricas industriales, sistemas de seguridad y climatización especializada.",
         delay: 0.8,
@@ -36,7 +36,7 @@ export const OurServices = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
     return (
-        <section id="servicios" className="py-24 bg-gradient-to-b from-background to-muted/20">
+        <section id="servicios" className="py-24 bg-gradient-to-b from-white to-white">
             <div className="container mx-auto px-4">
                 <motion.div
                     className="text-center mb-12"
@@ -56,16 +56,30 @@ export const OurServices = () => {
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: service.delay, duration: 0.6 }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: { delay: service.delay, duration: 0.6 }
+                            }}
                             viewport={{ once: true }}
-                            className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10 shadow-lg  hover:shadow-xl transition-shadow duration-300"
+
+                            // Animación de hover con su propia transición spring
+                            whileHover={{
+                                y: -10,
+                                transition: { type: "spring", stiffness: 300, damping: 20 }
+                            }}
+
+                            className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-xl cursor-pointer"
                             onMouseEnter={() => setHoveredIndex(idx)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <motion.div
-                                className="flex items-center justify-center mb-4"
-                                animate={hoveredIndex === idx ? { rotate: [0, 15, -15, 0] } : { rotate: 0 }}
+                                className="flex items-center justify-start mb-4"
+                                animate={
+                                    hoveredIndex === idx
+                                        ? { rotate: [0, 5, -5, 0] }
+                                        : { rotate: 0 }
+                                }
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
                             >
                                 {service.icon}
@@ -73,9 +87,9 @@ export const OurServices = () => {
                             <h3 className="text-lg font-semibold text-blue-600 text-center mb-2">{service.title}</h3>
                             <p className="text-sm text-gray-600 text-center">{service.description}</p>
                         </motion.div>
-
-
                     ))}
+
+
                 </div>
             </div>
         </section>

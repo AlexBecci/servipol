@@ -3,13 +3,14 @@ import { RedirectModule } from "../hoook/RedirectModule";
 import { ContainerPage } from "../shared/ContainerPage";
 import { WhatsAppButton } from "../shared/WhatsAppButton";
 import { Header } from "./components/Header";
-import { Service } from "./components/Services";
 import { AboutUs } from "./components/AboutUs";
 import { Experiencie } from "./components/Experience";
 import { Contact } from "./components/Contact";
 import { OurServices } from "./components/OurService";
-import { Benefits } from "./components/Benefits";
-import { WorkProcessSection } from "./components/WorkProcessSection";
+import { WhyChooseSection } from "./components/WhyChooseSection";
+import { WorkProcessSection } from "./components/WorkProcessSection copy";
+import { HeroSection } from "./components/HeroSection";
+import TestimonialsSection from "./components/TestimonialSection";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -31,13 +32,17 @@ export const PageMain = () => {
         <ContainerPage >
             <WhatsAppButton phoneNumber="1124555" />
             <Header onScrollToSection={scrollToSection} />
-            <Service />
+            <HeroSection/>
             <AboutUs />
             <OurServices />
-            <Benefits />
+            <WhyChooseSection />
             <WorkProcessSection />
+            <TestimonialsSection/>
             <Experiencie />
-            <Contact /> 
+            <Contact />
+            {/*
+            <Service />
+              */}
         </ContainerPage>
     )
 }
