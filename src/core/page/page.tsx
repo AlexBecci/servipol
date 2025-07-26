@@ -10,6 +10,7 @@ import TestimonialsSection from "./components/TestimonialSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { WorkProcessSection } from "./components/WorkProcessSection copy";
 import { ServicesSection } from "./components/ServiceSection";
+import { HeroSection } from "./components/HeroSection";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -31,8 +32,7 @@ export const PageMain = () => {
         <ContainerPage >
             <WhatsAppButton phoneNumber="1124555" />
             <Header onScrollToSection={scrollToSection} />
-            {/*     <HeroSection />
-            */}
+            <HeroSection />
             <AboutUs />
             <OurServices />
             <WhyChooseSection />
