@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BsQuote } from 'react-icons/bs';
 import { BiChevronLeft, BiChevronRight, BiStar } from 'react-icons/bi';
@@ -89,7 +89,7 @@ const TestimonialCarousel = () => {
 
                                 {/* Testimonial Text */}
                                 <motion.p
-                                    className="text-lg lg:text-xl text-industrial-600 mb-6 leading-relaxed italic"
+                                    className="text-base text-industrial-600 mb-6 leading-relaxed italic"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -103,13 +103,13 @@ const TestimonialCarousel = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.5 }}
                                 >
-                                    <h4 className="text-xl font-bold text-industrial-900 mb-1">
+                                    <h4 className="text-base font-bold text-industrial-900 mb-1">
                                         {testimonials[currentTestimonial].name}
                                     </h4>
-                                    <p className="text-primary font-semibold mb-1">
+                                    <p className="text-primary text-sm font-semibold mb-1">
                                         {testimonials[currentTestimonial].position}
                                     </p>
-                                    <p className="text-industrial-500">
+                                    <p className="text-industrial-500 text-sm">
                                         {testimonials[currentTestimonial].company}
                                     </p>
                                 </motion.div>
@@ -119,7 +119,8 @@ const TestimonialCarousel = () => {
                 </AnimatePresence>
 
                 {/* Navigation */}
-                <div className="absolute bottom-6 right-6 flex items-center gap-4">
+                {/*  <div className="absolute bottom-6 right-6 flex items-center gap-4"> */}
+                <div className="flex items-center gap-4 mt-6 sm:absolute sm:bottom-6 sm:right-6 justify-center">
                     <button
                         onClick={prevTestimonial}
                         className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-white rounded-full flex items-center justify-center transition-all duration-300"
