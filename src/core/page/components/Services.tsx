@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FaEnvelope, FaFileAlt } from "react-icons/fa"
+import { FaEnvelope } from "react-icons/fa"
 import { PiPhone } from "react-icons/pi"
 
 export const Service = () => {

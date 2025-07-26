@@ -45,7 +45,7 @@ export const WorkProcessSection = () => {
                 </motion.div>
 
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-                    {steps.map((step, index) => (
+                    {steps.map((step) => (
                         <motion.div
                             key={step.number}
                             initial={{ opacity: 0, y: 40 }}

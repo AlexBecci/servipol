@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { AiOutlineThunderbolt } from "react-icons/ai"
-import { FaTools, FaIndustry, FaMicrochip, FaBolt } from "react-icons/fa"
 import { HiOutlineChip } from "react-icons/hi"
 import { LuFactory } from "react-icons/lu"
 import { TbTool } from "react-icons/tb"
