@@ -32,7 +32,7 @@ export const WhyChooseSection = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg')] bg-cover bg-center bg-fixed"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 to-blue-600/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 to-blue-600/30"></div>
             </div>
 
             <div className="relative z-10 container mx-auto px-6">
@@ -46,7 +46,7 @@ export const WhyChooseSection = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         ¿Por Qué <span className="text-secondary">Elegirnos?</span>
                     </h2>
-                    <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                    <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
                     <p className="text-xl text-white/90 max-w-3xl mx-auto">
                         Nos diferenciamos por nuestro compromiso con la excelencia y la innovación tecnológica
                     </p>
@@ -63,7 +63,7 @@ export const WhyChooseSection = () => {
                             className="group"
                         >
                             <motion.div
-                                className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 h-full"
+                                className="backdrop-blur-xs bg-white/10 border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 h-full"
                                 whileHover={{
                                     y: -10,
                                     scale: 1.02
@@ -74,21 +74,21 @@ export const WhyChooseSection = () => {
                                 }}
                             >
                                 <motion.div
-                                    className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-6 mx-auto backdrop-blur-sm"
+                                    className="w-16 h-16 bg-gray-900/10 rounded-2xl flex items-center justify-center mb-6 mx-auto backdrop-blur-xs"
                                     whileHover={{
                                         /* rotate: 360, */
                                         scale: 1.1
                                     }}
                                     transition={{ duration: 0.6 }}
                                 >
-                                    <benefit.icon className="w-8 h-8 text-amber-500" />
+                                    <benefit.icon className="w-8 h-8 text-yellow-500" />
                                 </motion.div>
 
-                                <h3 className="text-xl font-bold text-amber-400 mb-4 text-center group-hover:text-secondary transition-colors duration-300">
+                                <h3 className="text-xl font-bold text-yellow-400 mb-4 text-center group-hover:text-amber-500 transition-colors duration-300">
                                     {benefit.title}
                                 </h3>
 
-                                <p className="text-gray-100 text-center leading-relaxed">
+                                <p className="text-gray-100 text-center group-hover:text-white  leading-relaxed">
                                     {benefit.description}
                                 </p>
                             </motion.div>

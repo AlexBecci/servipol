@@ -56,7 +56,7 @@ const TestimonialCarousel = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-8">
                             {/* Quote Icon */}
                             <div className="absolute top-6 left-6 opacity-10">
-                                <BsQuote className="w-16 h-16 text-primary" />
+                                <BsQuote className="w-16 h-16 text-blue-600" />
                             </div>
 
                             {/* Avatar */}
@@ -69,7 +69,7 @@ const TestimonialCarousel = () => {
                                 <img
                                     src={testimonials[currentTestimonial].image}
                                     alt={testimonials[currentTestimonial].name}
-                                    className="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-secondary shadow-lg"
+                                    className="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-yellow-500 shadow-lg"
                                 />
                             </motion.div>
 
@@ -83,13 +83,13 @@ const TestimonialCarousel = () => {
                                     transition={{ duration: 0.5, delay: 0.3 }}
                                 >
                                     {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                                        <BiStar key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                                        <BiStar key={i} className="w-5 h-5 fill-secondary text-yellow-500" />
                                     ))}
                                 </motion.div>
 
                                 {/* Testimonial Text */}
                                 <motion.p
-                                    className="text-base text-industrial-600 mb-6 leading-relaxed italic"
+                                    className="text-base text-gray-600 mb-6 leading-relaxed italic"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -103,13 +103,13 @@ const TestimonialCarousel = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.5 }}
                                 >
-                                    <h4 className="text-base font-bold text-industrial-900 mb-1">
+                                    <h4 className="text-base font-bold text-gray-900 mb-1">
                                         {testimonials[currentTestimonial].name}
                                     </h4>
-                                    <p className="text-primary text-sm font-semibold mb-1">
+                                    <p className="text-blue-600 text-sm font-semibold mb-1">
                                         {testimonials[currentTestimonial].position}
                                     </p>
-                                    <p className="text-industrial-500 text-sm">
+                                    <p className="text-gray-500 text-sm">
                                         {testimonials[currentTestimonial].company}
                                     </p>
                                 </motion.div>
@@ -123,7 +123,7 @@ const TestimonialCarousel = () => {
                 <div className="flex items-center gap-4 mt-6 sm:absolute sm:bottom-6 sm:right-6 justify-center">
                     <button
                         onClick={prevTestimonial}
-                        className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-white rounded-full flex items-center justify-center transition-all duration-300"
+                        className="w-12 h-12 bg-blue-600/10 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300"
                     >
                         <BiChevronLeft className="w-6 h-6" />
                     </button>
@@ -134,7 +134,7 @@ const TestimonialCarousel = () => {
                             <button
                                 key={index}
                                 onClick={() => setCurrentTestimonial(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-primary' : 'bg-industrial-300'
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
                                     }`}
                             />
                         ))}
@@ -142,7 +142,7 @@ const TestimonialCarousel = () => {
 
                     <button
                         onClick={nextTestimonial}
-                        className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-white rounded-full flex items-center justify-center transition-all duration-300"
+                        className="w-12 h-12 bg-blue-600/10 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300"
                     >
                         <BiChevronRight className="w-6 h-6" />
                     </button>

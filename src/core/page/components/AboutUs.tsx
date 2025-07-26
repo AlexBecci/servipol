@@ -16,13 +16,14 @@ export const AboutUs: React.FC = () => {
             <div className="container mx-auto px-4 max-w-4xl">
                 {/* Título */}
                 <motion.h2
-                    className="text-4xl md:text-5xl font-bold text-center text-primary mb-16"
+                    className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    ¿Quiénes Somos?
+                    ¿Quiénes <span className="text-blue-600"> Somos?</span>
+                    <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6"></div>
                 </motion.h2>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -54,34 +55,24 @@ export const AboutUs: React.FC = () => {
                     </motion.div>
 
                     {/* Imagen */}
-                    {isMobile ? (
-                        <div className="relative rounded-lg overflow-hidden shadow-lg">
+                    <motion.div
+                        className="relative  overflow-hidden rounded-md shadow-sm w-full"
+                        initial={isMobile ? { opacity: 0, y: 30 } : { opacity: 0, x: 50 }}
+                        whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                        whileHover={isMobile ? {} : { scale: 1.02 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="relative w-full h-64 ">
                             <img
-                                src="/images/industrial-panels.png"
-                                alt="Instalaciones industriales Servipol"
-                                className="w-full h-auto object-cover rounded-lg"
+                                src={'/images/servipol-ia.png'}
+                                alt={'Instalaciones industriales Servipol'}
+                                className="absolute top-0 left-0 w-full  object-contain"
                                 loading="lazy"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+
                         </div>
-                    ) : (
-                        <motion.div
-                            className="relative rounded-lg overflow-hidden shadow-lg"
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.1 }}
-                            whileHover={{ scale: 1.02 }}
-                            viewport={{ once: true }}
-                        >
-                            <img
-                                src="/images/industrial-panels.png"
-                                alt="Instalaciones industriales Servipol"
-                                className="w-full h-auto object-cover rounded-lg"
-                                loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                        </motion.div>
-                    )}
+                    </motion.div>
                 </div>
             </div>
         </section>

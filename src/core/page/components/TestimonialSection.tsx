@@ -18,16 +18,17 @@ const TestimonialsSection = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <AnimatedSection className="text-center mb-16">
-                    <h2 className="text-4xl  font-bold text-blue-600 mb-6">
-                        Lo Que Dicen Nuestros <span className="text-primary">Clientes</span>
+                    <h2 className="text-4xl  font-bold text-gray-800 mb-6">
+                        Lo Que Dicen Nuestros <span className="text-blue-600">Clientes</span>
                     </h2>
-                    <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                    <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
+
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Testimonios de empresas que confían en nuestros servicios industriales especializados
                     </p>
                 </AnimatedSection>
 
-                <AnimatedSection delay={0.4}>
+                <AnimatedSection delay={0.2}>
                     <TestimonialCarousel />
                 </AnimatedSection>
             </div>

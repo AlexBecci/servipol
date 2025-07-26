@@ -37,8 +37,8 @@ export const ExperienceSection: React.FC = () => {
             <div className="container mx-auto px-4">
                 {/* Título y subtítulo */}
                 <AnimatedSection className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
-                        Nuestra Experiencia
+                    <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Nuestra <span className="text-blue-600">Experiencia</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Trabajamos para industrias alimenticias, cervecerías artesanales,
@@ -68,7 +68,7 @@ export const ExperienceSection: React.FC = () => {
                             <p className="text-sm text-gray-600 text-center mb-4">
                                 {item.description}
                             </p>
-                            <span className="border flex items-center justify-center mx-auto w-1/2 lg:w-1/3  border-blue-600 text-blue-600 text-xs font-semibold text-center px-2 py-1 rounded-full">
+                            <span className="border-2 flex items-center justify-center mx-auto w-1/2 lg:w-1/3  border-blue-600 text-blue-600 text-xs font-semibold text-center px-2 py-1 rounded-full">
                                 {item.badge}
                             </span>
                         </motion.div>

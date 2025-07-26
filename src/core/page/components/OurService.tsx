@@ -45,7 +45,8 @@ export const OurServices = () => {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Nuestros Servicios</h2>
+                    <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros <span className="text-blue-600">Servicios</span></h2>
+                    <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Ofrecemos una amplia gama de servicios industriales especializados
                     </p>

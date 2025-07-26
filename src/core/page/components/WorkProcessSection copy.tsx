@@ -41,6 +41,8 @@ export const WorkProcessSection = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">¿Cómo Trabajamos?</h2>
+                    <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6"></div>
+
                     <p className="text-xl text-gray-600">Nuestro proceso de trabajo paso a paso</p>
                 </motion.div>
 
@@ -50,7 +52,7 @@ export const WorkProcessSection = () => {
                             key={step.number}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay:  0.1, duration: 0.2 }}
+                            transition={{ delay: 0.1, duration: 0.2 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -10, scale: 1.05 }}
                             className="group  p-8  transition-all duration-300 relative"

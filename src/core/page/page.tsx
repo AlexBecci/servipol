@@ -4,13 +4,12 @@ import { ContainerPage } from "../shared/ContainerPage";
 import { WhatsAppButton } from "../shared/WhatsAppButton";
 import { Header } from "./components/Header";
 import { AboutUs } from "./components/AboutUs";
-import { Contact } from "./components/Contact";
 import { OurServices } from "./components/OurService";
 import { WhyChooseSection } from "./components/WhyChooseSection";
-import { WorkProcessSection } from "./components/WorkProcessSection copy";
-import { HeroSection } from "./components/HeroSection";
 import TestimonialsSection from "./components/TestimonialSection";
 import { ExperienceSection } from "./components/ExperienceSection";
+import { WorkProcessSection } from "./components/WorkProcessSection copy";
+import { ServicesSection } from "./components/ServiceSection";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -32,17 +31,17 @@ export const PageMain = () => {
         <ContainerPage >
             <WhatsAppButton phoneNumber="1124555" />
             <Header onScrollToSection={scrollToSection} />
-            <HeroSection />
+            {/*     <HeroSection />
+            */}
             <AboutUs />
             <OurServices />
             <WhyChooseSection />
             <WorkProcessSection />
             <TestimonialsSection />
             <ExperienceSection />
-            <Contact />
-            {/*
-            <Service />
-              */}
+            <ServicesSection />
+            {/* <Contact /> */}
+
         </ContainerPage>
     )
 }
