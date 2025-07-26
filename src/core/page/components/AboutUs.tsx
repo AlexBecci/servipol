@@ -28,17 +28,17 @@ export const AboutUs: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Texto */}
                     <motion.div
-                        className="space-y-6 text-left"
-                        initial={isMobile ? { opacity: 0, scale: 0.95 } : { opacity: 0, x: -50 }}
+                        className="space-y-6 text-center sm:text-left"
+                        initial={isMobile ? { opacity: 0, scale: 0.95 } : { opacity: 0, x: 0 }}
                         whileInView={isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <p className="text-lg text-foreground/80 leading-relaxed">
+                        <p className="text-lg text-gray-800 ">
                             Somos <strong>Servipol Group SRL</strong>, una empresa especializada en servicios industriales y
                             mantenimiento integral con más de 15 años de experiencia en el mercado.
                         </p>
-                        <p className="text-lg text-foreground/80 leading-relaxed">
+                        <p className="text-lg text-gray-800 ">
                             Nuestro equipo de profesionales altamente capacitados trabaja de manera coordinada para ofrecer{" "}
                             <strong>soluciones personalizadas</strong> que se adapten a las necesidades específicas de cada cliente.
                         </p>
