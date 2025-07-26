@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { LuUsers } from "react-icons/lu";
+import useIsMobile from "../../hoook/IsMobile";
 
 export const AboutUs = () => {
+    const isMobile = useIsMobile();
 
 
     return (
@@ -54,8 +56,8 @@ export const AboutUs = () => {
                     {/* Imagen con efecto hover */}
                     <motion.div
                         className="relative rounded-lg overflow-hidden shadow-lg"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={isMobile ? { opacity: 0, y: 30 } : { opacity: 0, x: 50 }}
+                        whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                         whileHover={{ scale: 1.02 }}
                     >

@@ -7,25 +7,25 @@ export const Benefits = () => {
             icon: <FaBullseye className="h-12 w-12 text-yellow-400" />,
             title: "Un Solo Proveedor",
             description: "Solución integral con un único punto de contacto para todos sus servicios industriales.",
-            delay: 0.2,
+            delay: 0.1,
         },
         {
             icon: <FaCheckCircle className="h-12 w-12 text-yellow-400" />,
             title: "Seguimiento Continuo",
             description: "Monitoreo constante y seguimiento personalizado de todos nuestros servicios.",
-            delay: 0.4,
+            delay: 0.1,
         },
         {
             icon: <FaCog className="h-12 w-12 text-yellow-400" />,
             title: "Reducción de Costos",
             description: "Optimización de recursos y reducción significativa de costos operativos.",
-            delay: 0.6,
+            delay: 0.1,
         },
         {
             icon: <FaShieldAlt className="h-12 w-12 text-yellow-400" />,
             title: "Mayor Seguridad",
             description: "Cumplimiento estricto de normas de seguridad industrial y protocolos establecidos.",
-            delay: 0.8,
+            delay: 0.1,
         },
     ]
 
@@ -62,11 +62,14 @@ export const Benefits = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: benefit.delay, duration: 0.6 }}
                             viewport={{ once: true }}
-                            className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10 shadow-md hover:shadow-xl transition-shadow duration-300"
+                            whileHover={{ y: -10 }}
+                            className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10 shadow-md hover:shadow-xl cursor-pointer"
                         >
-                            <div className="flex items-center justify-center mb-4">
+                            <motion.div
+                                className="flex items-center justify-center mb-4"
+                            >
                                 {benefit.icon}
-                            </div>
+                            </motion.div>
                             <h3 className="text-lg font-semibold text-white text-center mb-2">{benefit.title}</h3>
                             <p className="text-sm text-blue-100 text-center">{benefit.description}</p>
                         </motion.div>

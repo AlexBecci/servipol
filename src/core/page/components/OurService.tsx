@@ -1,28 +1,32 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { AiOutlineThunderbolt } from "react-icons/ai"
 import { FaTools, FaIndustry, FaMicrochip, FaBolt } from "react-icons/fa"
+import { HiOutlineChip } from "react-icons/hi"
+import { LuFactory } from "react-icons/lu"
+import { TbTool } from "react-icons/tb"
 
 const services = [
     {
-        icon: <FaTools className="h-10 w-10 text-blue-600" />,
+        icon: <TbTool className="h-10 w-10 text-blue-600" />,
         title: "Mantenimiento Integral",
         description: "Mantenimiento preventivo y correctivo de equipos industriales, maquinaria y sistemas completos.",
         delay: 0.2,
     },
     {
-        icon: <FaIndustry className="h-10 w-10 text-blue-600" />,
+        icon: <LuFactory  className="h-10 w-10 text-blue-600" />,
         title: "Operación en Plantas",
         description: "Gestión y operación especializada de plantas industriales con personal técnico calificado.",
         delay: 0.4,
     },
     {
-        icon: <FaMicrochip className="h-10 w-10 text-blue-600" />,
+        icon: <HiOutlineChip className="h-10 w-10 text-blue-600" />,
         title: "Automatización",
         description: "Implementación de sistemas de automatización industrial para optimizar procesos productivos.",
         delay: 0.6,
     },
     {
-        icon: <FaBolt className="h-10 w-10 text-blue-600" />,
+        icon: <AiOutlineThunderbolt  className="h-10 w-10 text-blue-600" />,
         title: "Instalaciones Eléctricas",
         description: "Instalaciones eléctricas industriales, sistemas de seguridad y climatización especializada.",
         delay: 0.8,

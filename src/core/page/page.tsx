@@ -38,7 +38,6 @@ export const PageMain = () => {
             <WorkProcessSection />
             <Experiencie />
             <Contact /> 
-           
         </ContainerPage>
     )
 }
