@@ -11,7 +11,7 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg')] bg-cover bg-center bg-fixed"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 to-blue-600/20"></div>
             </div>
-
+        
             <div className="relative z-10 container mx-auto px-6 text-center text-white">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
