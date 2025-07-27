@@ -39,7 +39,7 @@ export const PageMain = () => {
             <WorkProcessSection />
             <TestimonialsSection />
             <ExperienceSection />
-            <ServicesSection />
+           {/*  <ServicesSection /> */}
             {/* <Contact /> */}
 
         </ContainerPage>
