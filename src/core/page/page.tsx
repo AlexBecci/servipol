@@ -9,8 +9,9 @@ import { WhyChooseSection } from "./components/WhyChooseSection";
 import TestimonialsSection from "./components/TestimonialSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { WorkProcessSection } from "./components/WorkProcessSection copy";
-import { ServicesSection } from "./components/ServiceSection";
 import { HeroSection } from "./components/HeroSection";
+import { ContactParalax } from "./components/ContactParalax";
+import Footer from "./components/Footer";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -39,9 +40,8 @@ export const PageMain = () => {
             <WorkProcessSection />
             <TestimonialsSection />
             <ExperienceSection />
-           {/*  <ServicesSection /> */}
-            {/* <Contact /> */}
-
+            <ContactParalax/>
+            <Footer/>
         </ContainerPage>
     )
 }

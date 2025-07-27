@@ -26,7 +26,7 @@ export const AboutUs: React.FC = () => {
           <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6" />
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Texto */}
           <motion.div
             className="space-y-6 text-center sm:text-left"
@@ -57,24 +57,24 @@ export const AboutUs: React.FC = () => {
           {/* Imagen */}
           <motion.div
             className="overflow-hidden rounded-lg shadow-lg"
-            initial={isMobile ? { opacity: 0, y: 30 } : { opacity: 0, x: 50 }}
+            initial={isMobile ? { opacity: 0, y: 30 } : { opacity: 0, x: 0 }}
             whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             whileHover={isMobile ? {} : { scale: 1.02 }}
             viewport={{ once: true }}
           >
-            {/* forzamos ratio 16:9 */}
-            <div className="relative mx- w-full aspect-video">
+            {/* usar aspecto dinámico según tamaño */}
+            <div className="relative w-full aspect-video sm:aspect-[4/3] md:aspect-video">
               <img
                 src="/images/servipol-ia.png"
                 alt="Instalaciones industriales Servipol"
-                className="absolute inset-0  w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              {/* opcional capa de contraste */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

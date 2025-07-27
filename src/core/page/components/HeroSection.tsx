@@ -5,7 +5,7 @@ import { PiPhone } from 'react-icons/pi';
 export const HeroSection = () => {
 
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section id='servicios' className="py-20 relative overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg')] bg-cover bg-center bg-fixed"></div>

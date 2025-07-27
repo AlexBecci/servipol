@@ -36,7 +36,7 @@ export const OurServices = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
     return (
-        <section id="servicios" className="py-24 bg-gradient-to-b from-gray-100 to-gray-100">
+        <section id="" className="py-24 bg-gradient-to-b from-gray-100 to-gray-100">
             <div className="container mx-auto px-4">
                 <motion.div
                     className="text-center mb-12"
