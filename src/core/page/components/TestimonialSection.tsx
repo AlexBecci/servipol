@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
                     </h2>
                     <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
 
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                         Testimonios de empresas que confían en nuestros servicios industriales especializados
                     </p>
                 </AnimatedSection>

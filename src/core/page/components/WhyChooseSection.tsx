@@ -13,7 +13,7 @@ export const WhyChooseSection = () => {
         {
             icon: BiTrophy,
             title: "Experiencia Comprobada",
-            description: "Más de 15 años ejecutando proyectos exitosos en diversas industrias del país."
+            description: "Más de 20 años ejecutando proyectos exitosos en diversas industrias del país."
         },
         {
             icon: CgLock,
@@ -32,7 +32,7 @@ export const WhyChooseSection = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg')] bg-cover bg-center bg-fixed"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 to-blue-600/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 to-blue-600/70"></div>
             </div>
 
             <div className="relative z-10 container mx-auto px-6">
@@ -44,10 +44,10 @@ export const WhyChooseSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        ¿Por Qué <span className="text-secondary">Elegirnos?</span>
+                        ¿Por Qué <span className="text-yellow-500">Elegirnos?</span>
                     </h2>
                     <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
-                    <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                    <p className="text-xl md:text-2xl text-white font-bold max-w-3xl mx-auto">
                         Nos diferenciamos por nuestro compromiso con la excelencia y la innovación tecnológica
                     </p>
                 </motion.div>
@@ -63,7 +63,7 @@ export const WhyChooseSection = () => {
                             className="group"
                         >
                             <motion.div
-                                className="backdrop-blur-xs bg-white/10 border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 h-full"
+                                className="backdrop-blur-xs bg-black/40 border border-white/20 rounded-2xl p-8 hover:bg-black/60 transition-all duration-500 h-full"
                                 whileHover={{
                                     y: -10,
                                     scale: 1.02
@@ -95,9 +95,35 @@ export const WhyChooseSection = () => {
                         </motion.div>
                     ))}
                 </div>
-
                 {/* Stats Section */}
-               {/*  <motion.div
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+                >
+                    {[
+                        { number: "20+", label: "Años de Experiencia en Montajes,mantenimientos de emergencias, predictivos ,preventivos y mantenimiento de oportunidad" },
+                        { number: "200+", label: "Proyectos Completados" },
+                        { number: "95%", label: "Satisfacción del Cliente" }
+                    ].map((stat, index) => (
+                        <div key={index} className="text-center">
+                            <motion.div
+                                className="text-4xl md:text-5xl font-bold text-yellow-500 mb-2"
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                {stat.number}
+                            </motion.div>
+                            <div className="text-white/90 text-lg font-semibold">{stat.label}</div>
+                        </div>
+                    ))}
+                </motion.div>
+                {/* Stats Section */}
+                {/*  <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}

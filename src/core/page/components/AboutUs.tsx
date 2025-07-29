@@ -11,12 +11,12 @@ export const AboutUs: React.FC = () => {
   return (
     <section
       id="nosotros"
-      className="min-h-screen py-24 flex items-center justify-center overflow-hidden"
+      className="min-h-screen py-24 flex items-center bg-gray-100 justify-center overflow-hidden"
     >
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Título */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16"
+          className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -29,19 +29,19 @@ export const AboutUs: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Texto */}
           <motion.div
-            className="space-y-6 text-center sm:text-left"
+            className="space-y-6 text-center font-bold sm:text-left"
             initial={isMobile ? { opacity: 0, scale: 0.95 } : { opacity: 0, x: 0 }}
             whileInView={isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-800">
-              Somos <strong>Servipol Group SRL</strong>, una empresa especializada en servicios industriales y
-              mantenimiento integral con más de 15 años de experiencia en el mercado.
+              Somos <strong className="text-blue-600">Servipol Group SRL</strong>, una empresa especializada en servicios industriales y
+              mantenimiento integral con más de 20 años de experiencia en el mercado.
             </p>
-            <p className="text-lg text-gray-800">
+            <p className="text-lg text-gray-800 ">
               Nuestro equipo de profesionales altamente capacitados trabaja de manera coordinada para ofrecer{" "}
-              <strong>soluciones personalizadas</strong> que se adapten a las necesidades específicas de cada cliente.
+              <strong className="">soluciones personalizadas</strong> que se adapten a las necesidades específicas de cada cliente.
             </p>
 
             <motion.div
@@ -50,7 +50,7 @@ export const AboutUs: React.FC = () => {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <LuUsers className="h-8 w-8 text-blue-600" />
-              <span className="text-lg font-semibold text-blue-600">Trabajo en Equipo</span>
+              <span className="text-lg font-bold text-blue-600">Trabajo en Equipo</span>
             </motion.div>
           </motion.div>
 

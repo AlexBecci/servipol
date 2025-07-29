@@ -4,11 +4,11 @@ import img from '/images/servipol-logo.png'
 import { NavLink } from "../../shared/ui/Navlink";
 import { MobileMenuButton } from "../../shared/ui/MobileMenuButton";
 import { SidebarMenu } from "../../shared/SidebarMenu";
-interface HeaderProps {
+export interface ScrollDTO {
     onScrollToSection: (id: string) => void
 }
 
-export const Header: FC<HeaderProps> = ({ onScrollToSection }) => {
+export const Header: FC<ScrollDTO> = ({ onScrollToSection }) => {
 
     const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false)
     const toggleSidebar = () => setIsSideBarOpen(!isSideBarOpen)
@@ -21,7 +21,7 @@ export const Header: FC<HeaderProps> = ({ onScrollToSection }) => {
                         <img src={img} alt="Servipol Group SRL" className="h-10 w-10 rounded-full" />
                         <span className="text-2xl font-bold text-blue-600">Servipol Group SRL</span>
                     </div>
-                    <nav className="hidden md:flex space-x-6">
+                    <nav className="hidden md:flex  space-x-6">
                         <NavLink onClick={() => onScrollToSection("servicios")}>Servicios</NavLink>
                         <NavLink onClick={() => onScrollToSection("nosotros")}>Nosotros</NavLink>
                         <NavLink onClick={() => onScrollToSection("experiencia")}>Experiencia</NavLink>

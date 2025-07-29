@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaArrowRi
 
 export const ContactParalax = () => {
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section id='contacto' className="py-20 relative overflow-hidden">
             {/* Fondo con parallax y overlay */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('/images/imagen_8.jpg')] bg-cover bg-center bg-fixed"></div>
@@ -81,7 +81,7 @@ export const ContactParalax = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="bg-white/20 backdrop-blur-md p-8 rounded-2xl shadow-lg"
+                        className="bg-gray-900/40 backdrop-blur-md p-8 rounded-2xl shadow-lg"
                     >
                         <h3 className="text-2xl font-bold mb-6 text-gray-300">Solicitar Presupuesto</h3>
                         <form className="space-y-4">
@@ -111,5 +111,5 @@ export const ContactParalax = () => {
 };
 
 // Tailwind helper (puedes ponerlo en globals o usar className directa)
-const inputStyle = `w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/20 placeholder-gray-300 text-gray-800`;
+const inputStyle = `w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900/50 placeholder-gray-300 text-gray-800`;
 

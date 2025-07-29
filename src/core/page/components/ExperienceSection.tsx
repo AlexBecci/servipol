@@ -40,7 +40,7 @@ export const ExperienceSection: React.FC = () => {
                     <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
                         Nuestra <span className="text-blue-600">Experiencia</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                         Trabajamos para industrias alimenticias, cervecerías artesanales,
                         metalúrgicas y más, brindando servicios especializados en todo el país
                         e internacional.
@@ -65,7 +65,7 @@ export const ExperienceSection: React.FC = () => {
                             <h3 className="text-lg font-semibold text-blue-600 text-center mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-sm text-gray-600 text-center mb-4">
+                            <p className="text-sm text-gray-700 text-center mb-4">
                                 {item.description}
                             </p>
                             <span className="border-2 flex items-center justify-center mx-auto w-1/2 lg:w-1/3  border-blue-600 text-blue-600 text-xs font-semibold text-center px-2 py-1 rounded-full">

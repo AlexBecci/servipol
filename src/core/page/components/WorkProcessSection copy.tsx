@@ -43,7 +43,7 @@ export const WorkProcessSection = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">¿Cómo Trabajamos?</h2>
                     <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6"></div>
 
-                    <p className="text-xl text-gray-600">Nuestro proceso de trabajo paso a paso</p>
+                    <p className="text-xl text-gray-700">Nuestro proceso de trabajo paso a paso</p>
                 </motion.div>
 
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
@@ -70,7 +70,7 @@ export const WorkProcessSection = () => {
                             </h3>
 
                             {/* Descripción */}
-                            <p className="text-sm text-center text-gray-600">
+                            <p className="text-sm text-center text-gray-700">
                                 {step.description}
                             </p>
                         </motion.div>

@@ -48,7 +48,7 @@ export const HeroSection = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         Soluciones integrales en <span className="text-secondary font-semibold">mantenimiento industrial</span>,
-                        automatización y operación de plantas con más de 15 años de experiencia
+                        automatización y operación de plantas con más de 20 años de experiencia
                     </motion.p>
 
                     <motion.div

@@ -7,11 +7,11 @@ import { AboutUs } from "./components/AboutUs";
 import { OurServices } from "./components/OurService";
 import { WhyChooseSection } from "./components/WhyChooseSection";
 import TestimonialsSection from "./components/TestimonialSection";
-import { ExperienceSection } from "./components/ExperienceSection";
-import { WorkProcessSection } from "./components/WorkProcessSection copy";
 import { HeroSection } from "./components/HeroSection";
 import { ContactParalax } from "./components/ContactParalax";
 import Footer from "./components/Footer";
+import ProcessSection from "./components/ProcessSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 export const PageMain = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -37,11 +37,11 @@ export const PageMain = () => {
             <AboutUs />
             <OurServices />
             <WhyChooseSection />
-            <WorkProcessSection />
+            <ProcessSection onScrollToSection={scrollToSection} />
             <TestimonialsSection />
-            <ExperienceSection />
-            <ContactParalax/>
-            <Footer/>
+            <ProjectsSection onScrollToSection={scrollToSection}/>
+            <ContactParalax />
+            <Footer onScrollToSection={scrollToSection}/>
         </ContainerPage>
     )
 }

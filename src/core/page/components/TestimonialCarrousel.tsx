@@ -89,7 +89,7 @@ const TestimonialCarousel = () => {
 
                                 {/* Testimonial Text */}
                                 <motion.p
-                                    className="text-base text-gray-600 mb-6 leading-relaxed italic"
+                                    className="text-base text-gray-700 mb-6 leading-relaxed italic"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}

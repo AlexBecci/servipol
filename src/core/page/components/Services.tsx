@@ -30,7 +30,7 @@ export const Service = () => {
                     <span className="block text-yellow-400">Mantenimiento Industrial</span>
                 </h2>
                 <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-                    Más de 15 años brindando servicios especializados en mantenimiento, automatización e instalaciones
+                    Más de 20 años brindando servicios especializados en mantenimiento, automatización e instalaciones
                     industriales con el más alto nivel de calidad y seguridad.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

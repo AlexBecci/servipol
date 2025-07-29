@@ -90,7 +90,7 @@ const AboutSection: React.FC = () => {
                                                 {slides[current].title}
                                             </h3>
                                         </div>
-                                        {/*     <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                        {/*     <p className="text-gray-700 text-lg leading-relaxed mb-8">
                                             {slides[current].content}
                                         </p> */}
                                         {/* Controles */}

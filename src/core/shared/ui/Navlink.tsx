@@ -7,7 +7,7 @@ export const NavLink = ({ onClick, children }: NavLinkProps) => {
   return (
     <button
       onClick={onClick}
-      className="relative inline-block text-gray-700 hover:text-blue-500 transition-colors duration-300 group"
+      className="relative inline-block text-gray-900 hover:text-blue-500 font-semibold transition-colors duration-300 group"
     >
       <span className="relative z-10">{children}</span>
 

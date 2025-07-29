@@ -1,6 +1,8 @@
+import type { FC } from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import type { ScrollDTO } from "./Header";
 
-const Footer = () => {
+const Footer: FC<ScrollDTO> = ({ onScrollToSection }) => {
     return (
         <footer className="bg-gray-900 text-white py-12">
             <div className="container mx-auto px-4">
@@ -16,7 +18,7 @@ const Footer = () => {
                             <span className="text-xl font-bold">Servipol Group SRL</span>
                         </div>
                         <p className="text-gray-400 mb-4">
-                            Servicios industriales y mantenimiento integral con más de 15 años de experiencia en el mercado.
+                            Servicios industriales y mantenimiento integral con más de 20 años de experiencia en el mercado.
                         </p>
                         <div className="flex gap-4 text-white/80">
                             <a href="#" className="hover:text-white"><FaFacebookF /></a>
@@ -32,24 +34,24 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#servicios" className="text-gray-400 hover:text-white transition-colors">
+                                <p onClick={() => { onScrollToSection("servicios") }} className="text-gray-400 hover:text-white transition-colors">
                                     Nuestros Servicios
-                                </a>
+                                </p>
                             </li>
                             <li>
-                                <a href="#nosotros" className="text-gray-400 hover:text-white transition-colors">
+                                <p onClick={() => { onScrollToSection("nosotros") }} className="text-gray-400 hover:text-white transition-colors">
                                     Quiénes Somos
-                                </a>
+                                </p>
                             </li>
                             <li>
-                                <a href="#experiencia" className="text-gray-400 hover:text-white transition-colors">
+                                <p onClick={() => { onScrollToSection("experiencia") }} className="text-gray-400 hover:text-white transition-colors">
                                     Experiencia
-                                </a>
+                                </p>
                             </li>
                             <li>
-                                <a href="#contacto" className="text-gray-400 hover:text-white transition-colors">
+                                <p onClick={() => { onScrollToSection("contacto") }} className="text-gray-400 hover:text-white transition-colors">
                                     Contacto
-                                </a>
+                                </p>
                             </li>
                         </ul>
                     </div>

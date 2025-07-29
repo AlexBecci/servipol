@@ -47,7 +47,7 @@ export const OurServices = () => {
                 >
                     <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros <span className="text-blue-600">Servicios</span></h2>
                     <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-800 font-bold max-w-2xl mx-auto">
                         Ofrecemos una amplia gama de servicios industriales especializados
                     </p>
                 </motion.div>
@@ -86,7 +86,7 @@ export const OurServices = () => {
                                 {service.icon}
                             </motion.div>
                             <h3 className="text-lg font-semibold text-blue-600 text-center mb-2">{service.title}</h3>
-                            <p className="text-sm text-gray-600 text-center">{service.description}</p>
+                            <p className="text-sm text-gray-800 text-center font-bold">{service.description}</p>
                         </motion.div>
                     ))}
 
