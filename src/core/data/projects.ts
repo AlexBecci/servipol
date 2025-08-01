@@ -19,7 +19,7 @@ export const Projects = [
     {
         id: 2,
         title: "Automatización de Procesos",
-        company: "Prosauic S.A",
+        company: "Prosavic S.A",
         location: "Buenos Aires",
         category: "Automatización",
         description: "Implementación de sistemas PLC y SCADA para optimización de procesos productivos en planta cervecera.",

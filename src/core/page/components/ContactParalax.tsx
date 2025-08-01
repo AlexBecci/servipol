@@ -111,5 +111,5 @@ export const ContactParalax = () => {
 };
 
 // Tailwind helper (puedes ponerlo en globals o usar className directa)
-const inputStyle = `w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900/50 placeholder-gray-300 text-gray-800`;
+const inputStyle = `w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900/50 placeholder-gray-500 text-gray-300`;
 

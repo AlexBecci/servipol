@@ -3,37 +3,50 @@ import type { FC } from 'react';
 import { BiCheckCircle, BiSearch, BiWrench } from 'react-icons/bi';
 import { BsFileText } from 'react-icons/bs';
 import type { ScrollDTO } from './Header';
+import { LuHammer } from 'react-icons/lu';
 
 const ProcessSection: FC<ScrollDTO> = ({ onScrollToSection }) => {
   const steps = [
     {
       number: "01",
-      icon: BiSearch,
+      icon: BiSearch, // análisis y diagnóstico
       title: "Análisis y Diagnóstico",
-      description: "Evaluamos tus necesidades específicas y realizamos un diagnóstico completo de tus instalaciones para diseñar la solución óptima."
+      description:
+        "Evaluamos tus necesidades específicas y realizamos un diagnóstico completo de tus instalaciones para diseñar la solución óptima."
     },
     {
       number: "02",
-      icon: BsFileText,
+      icon: BsFileText, // planificación y presupuesto
       title: "Planificación y Presupuesto",
-      description: "Desarrollamos un plan detallado del proyecto con cronograma, recursos necesarios y presupuesto transparente sin sorpresas."
+      description:
+        "Desarrollamos un plan detallado del proyecto con cronograma, recursos necesarios y presupuesto transparente sin sorpresas."
     },
     {
       number: "03",
-      icon: BiWrench,
-      title: "Ejecución del Proyecto",
-      description: "Implementamos la solución con nuestro equipo especializado, siguiendo los más altos estándares de calidad y seguridad industrial."
+      icon: BiWrench, // optimización de repuestos
+      title: "Optimización de Repuestos",
+      description:
+        "Analizamos la vida útil de los repuestos mediante sistemas de gestión técnica para reducir fallos repetitivos. Aplicamos mejoras en el desmontaje y montaje con herramientas especializadas, optimizando el tiempo de intervención y el costo-beneficio."
     },
     {
       number: "04",
-      icon: BiCheckCircle,
+      icon: LuHammer, // ejecución del proyecto (puede ser otro ícono de herramienta)
+      title: "Ejecución del Proyecto",
+      description:
+        "Implementamos la solución con nuestro equipo especializado, siguiendo los más altos estándares de calidad y seguridad industrial."
+    },
+    {
+      number: "05",
+      icon: BiCheckCircle, // seguimiento y soporte
       title: "Seguimiento y Soporte",
-      description: "Brindamos soporte continuo, mantenimiento programado y monitoreo para asegurar el óptimo funcionamiento a largo plazo."
+      description:
+        "Brindamos soporte continuo, mantenimiento programado y monitoreo para asegurar el óptimo funcionamiento a largo plazo."
     }
   ];
 
+
   return (
-    <section  className="py-20 bg-gray-100 relative overflow-hidden">
+    <section className="py-20 bg-gray-100 relative overflow-hidden">
       {/* Section Separator */}
 
 
@@ -55,7 +68,7 @@ const ProcessSection: FC<ScrollDTO> = ({ onScrollToSection }) => {
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -128,7 +141,7 @@ const ProcessSection: FC<ScrollDTO> = ({ onScrollToSection }) => {
               ¿Listo para comenzar tu proyecto industrial?
             </p>
             <motion.button
-            onClick={()=>onScrollToSection("servicios")}
+              onClick={() => onScrollToSection("servicios")}
               className="bg-blue-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-600/90 transition-all duration-300 shadow-lg"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}

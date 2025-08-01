@@ -17,8 +17,8 @@ export const Header: FC<ScrollDTO> = ({ onScrollToSection }) => {
         <>
             <header className="fixed top-0 left-0 right-0 z-30 bg-gray-100/60 backdrop-blur-lg border-b border-border/40 border-gray-300 transition-all duration-300 h-[72px]">
                 <div className="container mx-auto px-4 h-full flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                        <img src={img} alt="Servipol Group SRL" className="h-10 w-10 rounded-full" />
+                    <div className="flex items-center space-x-4">
+                        <img src={img} alt="Servipol Group SRL" className="h-12 w-12 rounded-full" />
                         <span className="text-2xl font-bold text-blue-600">Servipol Group SRL</span>
                     </div>
                     <nav className="hidden md:flex  space-x-6">
